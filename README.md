@@ -1,78 +1,79 @@
-# 📡 Hybrid 8-PSK & IPIM Modulation Scheme
+# 🔐 Hybrid 8-PSK and IPIM Modulation Scheme
 
 <p align="center">
-  <h2 align="center">Hybrid 8-PSK and IPIM Modulation Scheme</h2>
+  <b>Hybrid 8-PSK + 4-Level Delay-Based IPIM Communication System</b>
 </p>
 
 <p align="center">
-  <b>Digital Communication • 8-PSK • IPIM • Covert Communication • MATLAB • UDP</b>
-</p>
-
-
+  <b>Dual-Message Transmission Using Hybrid Digital Modulation</b>
 </p>
 
 <p align="center">
-  <i>A hybrid modulation approach for transmitting two independent messages over a common carrier waveform.</i>
+  MATLAB • 8-PSK • IPIM • UDP Communication • Signal Processing
 </p>
 
 ---
 
 ## 📌 Overview
 
-The **Hybrid 8-PSK & IPIM Modulation Scheme** project proposes a communication system that combines **8-Phase Shift Keying (8-PSK)** and **Index-Pulse Interval Modulation (IPIM)** to transmit two independent messages over the same carrier waveform.
+This project presents a **Hybrid 8-PSK and 4-Level Delay-Based IPIM Modulation Scheme** for transmitting two independent messages using a common time-domain waveform.
 
-The first message is encoded using 8-PSK, where information is represented through different carrier phase states.
+The first message (**Message A**) is encoded using **8-Phase Shift Keying (8-PSK)**, where every three input bits are mapped to one of eight carrier phases.
 
-The second message is embedded using pulse-interval/delay encoding, where information is represented through timing intervals between signal pulses.
+The second message (**Message B**) is encoded using **4-level delay modulation**, where the information is represented by different delay intervals between consecutive signal segments.
 
-At the receiver, separate demodulation techniques are used to recover both messages.
+The complete system is implemented in **MATLAB** and uses **UDP-based communication** to transfer the generated waveform from the transmitter to the receiver.
 
-### Project Highlights
+The receiver extracts the two information streams by analyzing:
 
-- **Primary Technique:** Hybrid modulation
-- **Modulation 1:** 8-Phase Shift Keying (8-PSK)
-- **Modulation 2:** Index-Pulse Interval Modulation (IPIM)
-- **Number of Messages:** Two independent messages
-- **Implementation:** MATLAB
-- **Communication Interface:** UDP
-- **Carrier Frequency:** 2000 Hz
-- **Sampling Frequency:** 10 kHz
-- **Symbol Rate:** 1000 symbols/sec
-- **8-PSK:** 3 bits/symbol
-- **IPIM:** 2 bits/symbol using four delay levels
-- **Application:** Covert and secure communication
-- **Project Type:** Communication System Simulation
+- **Carrier phase** for Message A
+- **Time-delay intervals** for Message B
 
 ---
 
-# 🎯 Objectives
+## 🎯 Objectives
 
-The major objectives of the project are:
-
-- Develop a hybrid modulation scheme combining 8-PSK and IPIM.
-- Transmit two independent messages using a common carrier waveform.
-- Encode the first message using 8-PSK phase states.
-- Embed the second message using pulse-interval timing information.
-- Develop a receiver capable of separating the two information streams.
-- Implement transmitter and receiver algorithms in MATLAB.
-- Transfer the generated waveform through UDP communication.
-- Evaluate the system under different channel conditions.
-- Investigate spectral efficiency, BER, covert transmission capability and robustness.
-- Explore applications in secure and privacy-sensitive communication.
+- Develop a hybrid modulation system combining **8-PSK and IPIM**.
+- Transmit two independent messages using a common waveform.
+- Encode Message A using 8-PSK.
+- Encode Message B using four different delay levels.
+- Generate the hybrid time-domain signal using MATLAB.
+- Transfer the signal using UDP communication.
+- Detect signal segments and delay intervals at the receiver.
+- Demodulate the 8-PSK signal.
+- Decode the delay-based information.
+- Recover both original messages at the receiver.
 
 ---
 
-# 🧩 Proposed System
+## 🧠 Proposed System
 
-The proposed system combines two different information dimensions:
-
-### Message A
-
-Message A is modulated using **8-PSK**.
-
-8-PSK uses eight distinct phase states of the carrier.
-
-Since:
+The proposed system combines two different information-bearing dimensions.
 
 ```text
-log₂(8) = 3 bits/symbol
+                 Message A
+                     │
+                     ▼
+             Binary Conversion
+                     │
+                     ▼
+                  8-PSK
+                     │
+                     │ Phase Information
+                     │
+                     ▼
+              ┌───────────────┐
+              │               │
+              │ Hybrid Signal │
+              │               │
+              └───────────────┘
+                     ▲
+                     │ Delay Information
+                     │
+                  IPIM
+                     ▲
+                     │
+             Binary Conversion
+                     ▲
+                     │
+                 Message B
