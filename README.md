@@ -302,27 +302,6 @@ The following parameters are relevant for evaluating the hybrid modulation schem
 
 ---
 
-## 🖼️ Project Output
-
-### Transmitter Output
-
-<p align="center">
-  <img src="images/Transmitter_output.png" alt="Transmitter Output" width="850">
-</p>
-
-### Receiver Output
-
-<p align="center">
-  <img src="images/Receiver_output.png" alt="Receiver Output" width="850">
-</p>
-
-### Decoded Output
-
-<p align="center">
-  <img src="images/Decoded_output.png" alt="Decoded Messages" width="850">
-</p>
-
----
 
 ## 🔐 Potential Applications
 
@@ -364,32 +343,6 @@ The following parameters are relevant for evaluating the hybrid modulation schem
 
 ---
 
-## 📁 Repository Structure
-
-<pre>
-Hybrid-8PSK-IPIM-Modulation/
-│
-├── matlab/
-│   ├── transmitter/
-│   │   └── transmitter.m
-│   │
-│   └── receiver/
-│       └── receiver.m
-│
-├── images/
-│   ├── Transmitter_output.png
-│   ├── Receiver_output.png
-│   └── Decoded_output.png
-│
-├── docs/
-│   └── project-report.pdf
-│
-├── LICENSE
-│
-└── README.md
-</pre>
-
----
 
 ## ▶️ How to Run
 
