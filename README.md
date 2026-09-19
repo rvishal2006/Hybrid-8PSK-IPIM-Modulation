@@ -77,3 +77,144 @@ The proposed system combines two different information-bearing dimensions.
                      ▲
                      │
                  Message B
+
+---
+
+🏗️ System Architecture
+
+
+                  Hybrid Signal
+                       │
+             ┌─────────┴─────────┐
+             │                   │
+             ▼                   ▼
+       Phase Variation       Time Delay
+             │                   │
+             ▼                   ▼
+           8-PSK                IPIM
+             │                   │
+             ▼                   ▼
+        Message A            Message B
+
+---
+
+                         ┌─────────────────┐
+                         │    Message A    │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+                         Binary Conversion
+                                  │
+                                  ▼
+                             8-PSK
+                         Phase Encoding
+                                  │
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │                 │
+                         │ Hybrid Waveform │──────► UDP
+                         │                 │
+                         └─────────────────┘
+                                  ▲
+                                  │
+                                  │
+                         Delay Encoding
+                              IPIM
+                                  ▲
+                                  │
+                         Binary Conversion
+                                  ▲
+                                  │
+                         ┌────────┴────────┐
+                         │    Message B    │
+                         └─────────────────┘
+
+---
+
+💻 MATLAB Implementation
+
+The complete system is implemented using MATLAB.
+
+📤 Transmitter
+
+The transmitter:
+
+Accepts Message A and Message B.
+Converts both messages into binary streams.
+Adds an 8-bit length field.
+Encodes Message A using 8-PSK.
+Encodes Message B using four delay levels.
+Generates the hybrid waveform.
+Displays the transmitted signal.
+Sends the waveform using UDP.
+
+Source Code: transmitter.m
+
+📥 Receiver
+
+The receiver:
+
+Creates a UDP receiver.
+Waits for incoming waveform data.
+Reads the received UDP datagram.
+Converts the received data into signal samples.
+Detects signal segments.
+Detects silent gaps.
+Performs 8-PSK demodulation.
+Detects delay levels.
+Reconstructs the binary streams.
+Converts the binary data back to ASCII.
+Displays the recovered messages.
+
+Source Code: receiver.m
+
+---
+
+📊 Performance Parameters
+
+The system can be evaluated using:
+
+Bit Error Rate (BER)
+Signal-to-Noise Ratio (SNR)
+Spectral efficiency
+Data rate
+Delay detection accuracy
+Phase detection accuracy
+Noise tolerance
+Interference tolerance
+
+The current implementation demonstrates the generation, transmission, reception, demodulation, and recovery of the two messages.
+
+---
+🔐 Potential Applications
+
+Secure communication research
+Covert communication research
+Satellite communication
+Wireless sensor networks
+Internet of Things (IoT)
+Tactical communication research
+Privacy-sensitive communication systems
+Software-defined radio research
+
+---
+
+📚 Key Technical Concepts
+
+Digital Communication
+8-PSK
+Phase Shift Keying
+Index Modulation
+IPIM
+Delay-Based Modulation
+Signal Segmentation
+Phase Detection
+Carrier Demodulation
+Time-Delay Detection
+ASCII Encoding
+Binary Data Representation
+UDP Communication
+MATLAB Signal Processing
+
+---
