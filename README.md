@@ -80,7 +80,7 @@ The proposed system combines two different information-bearing dimensions.
 
 ---
 
-🏗️ System Architecture
+##🏗️ System Architecture
 
 
                   Hybrid Signal
@@ -96,7 +96,9 @@ The proposed system combines two different information-bearing dimensions.
              ▼                   ▼
         Message A            Message B
 
+
 ---
+
 
                          ┌─────────────────┐
                          │    Message A    │
@@ -132,7 +134,8 @@ The proposed system combines two different information-bearing dimensions.
 
 ---
 
-💻 MATLAB Implementation
+
+##💻 MATLAB Implementation
 
 The complete system is implemented using MATLAB.
 
@@ -169,9 +172,11 @@ Displays the recovered messages.
 
 Source Code: receiver.m
 
+
 ---
 
-📊 Performance Parameters
+
+##📊 Performance Parameters
 
 The system can be evaluated using:
 
@@ -186,8 +191,11 @@ Interference tolerance
 
 The current implementation demonstrates the generation, transmission, reception, demodulation, and recovery of the two messages.
 
+
 ---
-🔐 Potential Applications
+
+
+##🔐 Potential Applications
 
 Secure communication research
 Covert communication research
@@ -198,9 +206,11 @@ Tactical communication research
 Privacy-sensitive communication systems
 Software-defined radio research
 
+
 ---
 
-📚 Key Technical Concepts
+
+##📚 Key Technical Concepts
 
 Digital Communication
 8-PSK
