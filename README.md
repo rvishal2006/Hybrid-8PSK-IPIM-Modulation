@@ -385,14 +385,6 @@ Enter Message B (for delay encoding): Yadhu
 - UDP Communication
 - MATLAB Signal Processing
 
----
-
-## 📖 References
-
-- J. Postel, "User Datagram Protocol," RFC 768, 1980.
-- J. G. Proakis and M. Salehi, *Digital Communications*, McGraw-Hill.
-- MATLAB Documentation, MathWorks.
-- Project report: [docs/project-report.pdf](docs/project-report.pdf)
 
 ---
 
@@ -401,27 +393,7 @@ Enter Message B (for delay encoding): Yadhu
 The current implementation demonstrates generation, transmission, reception, demodulation, and recovery of two independent messages using the hybrid 8-PSK and IPIM modulation scheme.
 
 ---
-
-## 👥 Team & Contributors
-
-<div align="center">
-
-<table>
-  <thead>
-    <tr>
-      <th align="center">Team Members</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td align="center">Harishwar A</td></tr>
-    <tr><td align="center">Vishal R</td></tr>
-    <tr><td align="center">Surya M</td></tr>
-  </tbody>
-</table>
-
-</div>
-
----
+ 
 
 ## ⚖️ License
 
